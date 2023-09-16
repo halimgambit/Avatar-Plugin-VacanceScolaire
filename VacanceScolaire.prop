@@ -1,0 +1,14 @@
+{
+	"modules": { 
+		"VacanceScolaire": {
+			"version": "1.0",
+			"name": "vacancescolaire",
+			"rules": {
+				"zoneA": ["school holiday in zone a","school * holiday * zone a"],
+				"zoneB": ["school holiday in zone b","school * holiday * zone b"],
+				"zoneC": ["school holiday in zone c","school * holiday * zone c"]
+			}
+		}
+	}
+}
+			
