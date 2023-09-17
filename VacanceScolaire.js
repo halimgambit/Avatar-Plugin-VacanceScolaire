@@ -25,22 +25,19 @@ function scolaire (vacance, data, client, $) {
 	  })
 	  .then((body) => {
 	   $ = cheerio.load(body);
-	   let zoneVa = "zone-a";
 	   if (vacance === zoneVa) {
 		  const aZone = $('body > div.container > main > article > section:nth-child(2) > div:nth-child(2)').text();
 		  Avatar.speak(`Voici les vacances ${aZone}`, data.client, () => {
 			  Avatar.Speech.end(data.client);
 		  });
 		}
-		let zoneVb = "zone-b";
-		if (vacance === zoneVb) {
+		else if (vacance === zoneVb) {
 		  const bZone = $('body > div.container > main > article > section:nth-child(2) > div:nth-child(2)').text();
 		  Avatar.speak(`Voici les vacances scolaire ${bZone}`, data.client, () => {
 			  Avatar.Speech.end(data.client);
 		  });
 		}
-		let zoneVc = "zone-c";
-		if (vacance === zoneVc) {
+		else if (vacance === zoneVc) {
 			const cZone = $('body > div.container > main > article > section:nth-child(2) > div:nth-child(2)').text();
 			Avatar.speak(`Voici les vacances scolaire ${cZone}`, data.client, () => {
 				Avatar.Speech.end(data.client);
